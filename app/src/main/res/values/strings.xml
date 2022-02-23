@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Weatherware</string>
+    <string name="london">LONDON</string>
+    <string name="united_kingdom">United Kingdom</string>
+    <string name="sunday_27_sep">Sunday, 27 Sep</string>
+    <string name="heavy_rain">Heavy Rain</string>
+    <string name="_27">27°</string>
+    <string name="feels_like_37">Feels like 37°</string>
+    <string name="good_night">Good Night</string>
+    <string name="_28">28%</string>
+    <string name="today">Today</string>
+    <string name="next_7_days">Next 7 days</string>
+</resources>

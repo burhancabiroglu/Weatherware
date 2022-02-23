@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingVertical="12dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="28dp"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="5dp"
+        android:outlineAmbientShadowColor="#dd1A1D26"
+        android:outlineSpotShadowColor="#dd1A1D26"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/picture_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToPadding="false"
+            android:elevation="20dp"
+            app:cardElevation="20dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@+id/notification_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/notification_button"
+            app:shapeAppearanceOverlay="@style/FloatingActionButton.ShapeAppearanceOverlay"
+            app:strokeColor="#151A1D26"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_profile" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:layout_constraintHorizontal_bias="0.06"
+            android:id="@+id/notification_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/app_name"
+            android:outlineAmbientShadowColor="#dd1A1D26"
+            android:outlineSpotShadowColor="#dd1A1D26"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_bell"
+            android:tint="@color/primary_text"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            app:elevation="12dp"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.44"
+            app:layout_constraintStart_toEndOf="@+id/menu_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/primary_text"
+            app:borderWidth="0dp"
+            app:fabSize="auto"
+            android:clickable="true"
+            app:elevation="12dp"
+            android:outlineAmbientShadowColor="#aa1A1D26"
+            android:outlineSpotShadowColor="#aa1A1D26"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.44"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/FloatingActionButton.ShapeAppearanceOverlay"
+            android:contentDescription="@string/app_name"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingHorizontal="28dp"
+        android:clipToPadding="false"
+        android:id="@+id/top_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+        app:layout_constraintVertical_bias="0">
+
+
+        <TextView
+            android:id="@+id/province_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/london"
+            android:textColor="@color/primary_text"
+            android:textFontWeight="800"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/state_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <TextView
+            android:id="@+id/state_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/united_kingdom"
+            android:textColor="@color/primary_text"
+            android:textFontWeight="800"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/date_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/province_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/province_text_view"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <TextView
+            android:layout_marginTop="6dp"
+            android:textSize="12sp"
+            android:id="@+id/date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sunday_27_sep"
+            android:textFontWeight="700"
+            android:textColor="@color/secondary_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/state_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/state_text_view"
+            app:layout_constraintHorizontal_bias="0"/>
+
+
+        <com.google.android.material.card.MaterialCardView
+            app:cardPreventCornerOverlap="false"
+            app:shapeAppearanceOverlay="@style/CardView.ShapeAppearanceOverlay"
+            android:id="@+id/location_card_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToPadding="false"
+            app:cardElevation="10dp"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="12:10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/state_text_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#151A1D26"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_map" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:clipToPadding="false"
+        android:paddingHorizontal="28dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHeight_percent="0.29"
+        android:id="@+id/medium_body_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintWidth_percent="0.45"
+            android:scaleType="fitCenter"
+            android:id="@+id/weather_image_view"
+            android:translationZ="11dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_weather" />
+
+        <TextView
+            android:shadowColor="@color/white"
+            android:shadowDx="0.1"
+            android:shadowDy="0.1"
+            android:shadowRadius="3"
+            android:id="@+id/weather_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heavy_rain"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:translationZ="11dp"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="@+id/weather_image_view"
+            app:layout_constraintStart_toStartOf="@+id/weather_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/weather_image_view"
+            app:layout_constraintVertical_bias="0.1" />
+
+
+        <TextView
+            android:id="@+id/day_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/good_night"
+            android:textColor="#aaffffff"
+            android:textFontWeight="700"
+            android:translationZ="11dp"
+            android:textSize="13sp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="@+id/weather_image_view"
+            app:layout_constraintStart_toStartOf="@+id/weather_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/weather_text_view"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            android:outlineAmbientShadowColor="@color/primary_text"
+            android:outlineSpotShadowColor="@color/primary_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_blue" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.cabir.atomic_components.GradientTextView
+            app:startColor="#31ffffff"
+            app:endColor="#ffffff"
+            android:id="@+id/temperature_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintHeight_percent="0.45"
+            app:layout_constraintVertical_bias="0"
+            android:shadowColor="@color/white"
+            android:shadowDx="0.1"
+            android:shadowDy="0.1"
+            android:shadowRadius="3"
+            android:text="@string/_27"
+            android:textFontWeight="700"
+            android:translationZ="11dp"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+            app:layout_constraintStart_toEndOf="@+id/weather_image_view"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView" />
+
+
+        <TextView
+            android:id="@+id/feel_temperature_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/white"
+            android:text="@string/feels_like_37"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            android:translationZ="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/temperature_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/temperature_text_view"
+            app:layout_constraintVertical_bias="0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingHorizontal="8dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:translationZ="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toEndOf="@+id/weather_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/feel_temperature_text_view"
+            app:layout_constraintWidth_percent="0.4">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                app:lottie_speed="0.2"
+                app:layout_constraintVertical_bias="1"
+                android:id="@+id/lottieAnimationView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitCenter"
+                android:translationZ="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/wind_turbine" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                app:lottie_speed="0.3"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintHeight_percent="0.9"
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitCenter"
+                android:translationZ="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/wind_turbine" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingHorizontal="28dp"
+        android:id="@+id/bottom_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medium_body_layout"
+        app:layout_constraintVertical_bias="0.02">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="1dp"
+                app:cardElevation="0dp"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#0c1A1D26"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/FloatingActionButton.ShapeAppearanceOverlay">
+
+                <ImageView
+                    android:layout_margin="12dp"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_28"
+                android:textColor="@color/primary_text"
+                android:textFontWeight="600"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent" >
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="72dp"
+                android:layout_height="67dp"
+                android:layout_margin="1dp"
+                android:backgroundTint="#0c1A1D26"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/FloatingActionButton.ShapeAppearanceOverlay">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_weather"
+                    android:contentDescription="@string/app_name"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_28"
+                android:textColor="@color/primary_text"
+                android:textFontWeight="600"
+                android:textSize="14sp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardElevation="0dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:backgroundTint="#0b1A1D26"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/FloatingActionButton.ShapeAppearanceOverlay">
+
+                <ImageView
+                    android:layout_margin="12dp"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_28"
+                android:textColor="@color/primary_text"
+                android:textFontWeight="600"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:clipToPadding="false"
+
+        android:paddingHorizontal="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_body_layout">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="@string/today"
+                android:textColor="@color/primary_text"
+                android:textFontWeight="700"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawableTint="@color/blue"
+                android:text="@string/next_7_days"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                android:textFontWeight="800"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingBottom="10dp"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHeight_percent="0.65"
+            android:clipToPadding="false"
+            tools:listitem="@layout/hourly_weather_recycler_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
