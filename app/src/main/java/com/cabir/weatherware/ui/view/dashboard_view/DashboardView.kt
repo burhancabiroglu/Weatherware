@@ -34,7 +34,7 @@ class DashboardView:Fragment() {
     inner class DashboardViewObserver(): Observer<Resource<WeatherReport>>{
         override fun onChanged(t: Resource<WeatherReport>) {
             when(t.status){
-                Resource.Status.SUCCESS ->
+                Resource.Status.SUCCESS -> null;
             }
         }
 
