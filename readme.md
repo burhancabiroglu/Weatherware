@@ -1,4 +1,4 @@
-[<p align="center"><img src="https://github.com/burhancabiroglu/Weatherware/blob/main/mdassets/Weatherware.png" data-canonical-src="https://github.com/burhancabiroglu/Weatherware/blob/main/mdassets/Weatherware.png" width="300" height="300" align="center"/></p>](https://github.com/burhancabiroglu/weatherware)
+[<p align="center"><img src="https://github.com/burhancabiroglu/Weatherware/blob/main/mdassets/Weatherware.png" data-canonical-src="https://github.com/burhancabiroglu/Weatherware/blob/main/mdassets/Weatherware.png" width="200" height="200" align="center"/></p>](https://github.com/burhancabiroglu/weatherware)
 
 # Weatherware Android App
 
@@ -11,6 +11,7 @@
 
 [<p align="center"><img src="https://github.com/burhancabiroglu/Weatherware/blob/main/mdassets/app_gif.gif" data-canonical-src="https://github.com/burhancabiroglu/Weatherware/blob/main/mdassets/app_gif.gif" width="300" align="center"/></p>](https://github.com/burhancabiroglu/weatherware)
 
+<br>
 
 ## Support Frameworks & Modules
 
